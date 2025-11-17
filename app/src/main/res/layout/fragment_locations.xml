@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark_metallic"
+    android:padding="16dp"
+    tools:context=".ui.locations.LocationsFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Header -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Location-Based Rules"
+            android:textColor="@color/electric_blue"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Add Location Card -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardBackgroundColor="@color/card_background"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Add New Location Rule"
+                    android:textColor="@color/metallic_silver"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="16dp" />
+
+                <!-- Location Name -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    app:boxBackgroundColor="@color/dark_metallic"
+                    app:hintTextColor="@color/metallic_silver"
+                    app:boxStrokeColor="@color/electric_blue">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_location_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Location Name (e.g., Office, Home)"
+                        android:textColor="@color/metallic_silver"
+                        android:textColorHint="@color/metallic_silver" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Location Selection -->
+                <Button
+                    android:id="@+id/btn_get_current_location"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Get Current Location"
+                    android:textColor="@color/dark_metallic"
+                    android:backgroundTint="@color/aqua_glow"
+                    android:layout_marginBottom="8dp" />
+
+                <Button
+                    android:id="@+id/btn_use_manual"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Enter Coordinates Manually"
+                    android:textColor="@color/dark_metallic"
+                    android:backgroundTint="@color/metallic_silver"
+                    android:layout_marginBottom="8dp" />
+
+                <TextView
+                    android:id="@+id/tv_coordinates"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="No coordinates selected"
+                    android:textColor="@color/metallic_silver"
+                    android:textSize="12sp"
+                    android:layout_marginBottom="8dp"
+                    android:gravity="center" />
+
+                <!-- Manual Coordinates -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2"
+                    android:layout_marginBottom="12dp">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginEnd="4dp"
+                        app:boxBackgroundColor="@color/dark_metallic"
+                        app:hintTextColor="@color/metallic_silver"
+                        app:boxStrokeColor="@color/electric_blue">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/et_latitude"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Latitude"
+                            android:inputType="numberDecimal"
+                            android:textColor="@color/metallic_silver"
+                            android:textColorHint="@color/metallic_silver" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginStart="4dp"
+                        app:boxBackgroundColor="@color/dark_metallic"
+                        app:hintTextColor="@color/metallic_silver"
+                        app:boxStrokeColor="@color/electric_blue">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/et_longitude"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Longitude"
+                            android:inputType="numberDecimal"
+                            android:textColor="@color/metallic_silver"
+                            android:textColorHint="@color/metallic_silver" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </LinearLayout>
+
+                <!-- Radius -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    app:boxBackgroundColor="@color/dark_metallic"
+                    app:hintTextColor="@color/metallic_silver"
+                    app:boxStrokeColor="@color/electric_blue">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_radius"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Radius (meters)"
+                        android:inputType="number"
+                        android:text="100"
+                        android:textColor="@color/metallic_silver"
+                        android:textColorHint="@color/metallic_silver" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Profile Selection -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="When entering this location:"
+                    android:textColor="@color/metallic_silver"
+                    android:textSize="14sp"
+                    android:layout_marginBottom="4dp" />
+
+                <Spinner
+                    android:id="@+id/spinner_enter_profile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/electric_blue"
+                    android:layout_marginBottom="12dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="When leaving this location:"
+                    android:textColor="@color/metallic_silver"
+                    android:textSize="14sp"
+                    android:layout_marginBottom="4dp" />
+
+                <Spinner
+                    android:id="@+id/spinner_exit_profile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/electric_blue"
+                    android:layout_marginBottom="16dp" />
+
+                <!-- Add Button -->
+                <Button
+                    android:id="@+id/btn_add_location"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Add Location Rule"
+                    android:textColor="@color/dark_metallic"
+                    android:backgroundTint="@color/electric_blue" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- Saved Locations -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="@color/card_background"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Saved Location Rules"
+                    android:textColor="@color/metallic_silver"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="16dp" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/locations_recycler_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="400dp"
+                    android:background="@color/dark_metallic" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+</ScrollView>

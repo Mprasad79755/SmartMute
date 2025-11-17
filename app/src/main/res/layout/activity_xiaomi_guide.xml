@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@color/dark_metallic">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Xiaomi Device Setup"
+            android:textColor="@color/electric_blue"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginBottom="24dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="For SmartMute to work reliably on Xiaomi devices, please enable these settings:"
+            android:textColor="@color/metallic_silver"
+            android:textSize="16sp"
+            android:layout_marginBottom="32dp" />
+
+        <!-- Auto Start Section -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardBackgroundColor="@color/card_background"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="1. Auto-start"
+                    android:textColor="@color/electric_blue"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="8dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Allow SmartMute to start automatically after reboot"
+                    android:textColor="@color/metallic_silver"
+                    android:textSize="14sp"
+                    android:layout_marginBottom="16dp" />
+
+                <Button
+                    android:id="@+id/btn_auto_start_setting"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Enable Auto-start"
+                    android:textColor="@color/dark_metallic"
+                    android:backgroundTint="@color/aqua_glow" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- Battery Optimization Section -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="32dp"
+            app:cardBackgroundColor="@color/card_background"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="2. Battery Optimization"
+                    android:textColor="@color/electric_blue"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="8dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Disable battery optimization for background location monitoring"
+                    android:textColor="@color/metallic_silver"
+                    android:textSize="14sp"
+                    android:layout_marginBottom="16dp" />
+
+                <Button
+                    android:id="@+id/btn_battery_setting"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Disable Battery Optimization"
+                    android:textColor="@color/dark_metallic"
+                    android:backgroundTint="@color/aqua_glow" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <Button
+            android:id="@+id/btn_done"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="I've Enabled These Settings"
+            android:textColor="@color/dark_metallic"
+            android:backgroundTint="@color/electric_blue" />
+
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark_metallic"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Header -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sound Profiles"
+            android:textColor="@color/electric_blue"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Add Profile Card -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardBackgroundColor="@color/card_background"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Create New Profile"
+                    android:textColor="@color/metallic_silver"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="16dp" />
+
+                <!-- Profile Name -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    app:boxBackgroundColor="@color/dark_metallic"
+                    app:hintTextColor="@color/metallic_silver"
+                    app:boxStrokeColor="@color/electric_blue">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_profile_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Profile Name"
+                        android:textColor="@color/metallic_silver"
+                        android:textColorHint="@color/metallic_silver" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Volume Controls -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Call Volume:"
+                    android:textColor="@color/metallic_silver"
+                    android:layout_marginBottom="4dp" />
+
+                <SeekBar
+                    android:id="@+id/sb_call_volume"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp" />
+
+                <TextView
+                    android:id="@+id/tv_call_volume"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Call: 0"
+                    android:textColor="@color/aqua_glow"
+                    android:textSize="12sp"
+                    android:layout_marginBottom="12dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Media Volume:"
+                    android:textColor="@color/metallic_silver"
+                    android:layout_marginBottom="4dp" />
+
+                <SeekBar
+                    android:id="@+id/sb_media_volume"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp" />
+
+                <TextView
+                    android:id="@+id/tv_media_volume"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Media: 0"
+                    android:textColor="@color/aqua_glow"
+                    android:textSize="12sp"
+                    android:layout_marginBottom="12dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Notification Volume:"
+                    android:textColor="@color/metallic_silver"
+                    android:layout_marginBottom="4dp" />
+
+                <SeekBar
+                    android:id="@+id/sb_notification_volume"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp" />
+
+                <TextView
+                    android:id="@+id/tv_notification_volume"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Notification: 0"
+                    android:textColor="@color/aqua_glow"
+                    android:textSize="12sp"
+                    android:layout_marginBottom="16dp" />
+
+                <!-- Options -->
+                <CheckBox
+                    android:id="@+id/cb_vibrate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Vibrate Mode"
+                    android:textColor="@color/metallic_silver"
+                    android:layout_marginBottom="8dp" />
+
+                <CheckBox
+                    android:id="@+id/cb_dnd"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Do Not Disturb"
+                    android:textColor="@color/metallic_silver"
+                    android:layout_marginBottom="16dp" />
+
+                <!-- Buttons -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <Button
+                        android:id="@+id/btn_test_profile"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Test"
+                        android:textColor="@color/dark_metallic"
+                        android:backgroundTint="@color/aqua_glow"
+                        android:layout_marginEnd="8dp" />
+
+                    <Button
+                        android:id="@+id/btn_add_profile"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Add Profile"
+                        android:textColor="@color/dark_metallic"
+                        android:backgroundTint="@color/electric_blue" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- Saved Profiles -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="@color/card_background"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Saved Profiles"
+                    android:textColor="@color/metallic_silver"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="16dp" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/profiles_recycler_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="400dp"
+                    android:background="@color/dark_metallic" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+</ScrollView>

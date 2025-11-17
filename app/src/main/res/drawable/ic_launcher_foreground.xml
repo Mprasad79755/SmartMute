@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- Background Glow Effect -->
+    <path
+        android:pathData="M54,54m-46,0a46,46 0 1,1 92,0a46,46 0 1,1 -92,0"
+        android:fillColor="#1A00FFD5"
+        android:strokeWidth="0"/>
+
+    <!-- Outer Holographic Ring -->
+    <path
+        android:pathData="M54,10a44,44 0 1,1 0,88a44,44 0 1,1 0,-88"
+        android:strokeWidth="3"
+        android:strokeColor="@color/aqua_glow"
+        android:fillColor="@android:color/transparent"
+        />
+
+    <!-- Inner Glow Ring -->
+    <path
+        android:pathData="M54,16a38,38 0 1,1 0,76a38,38 0 1,1 0,-76"
+        android:strokeWidth="1"
+        android:strokeColor="#80FFFFFF"
+        android:fillColor="@android:color/transparent"/>
+
+    <!-- 3D Sound Icon Body -->
+    <group>
+        <!-- Main speaker body -->
+        <path
+            android:pathData="M32,44 L44,44 L60,28 L60,80 L44,64 L32,64z"
+            android:fillColor="@color/metallic_silver"
+            android:strokeColor="#40000000"
+            android:strokeWidth="1"/>
+
+        <!-- Speaker highlight -->
+        <path
+            android:pathData="M34,46 L42,46 L56,32 L56,34 L42,48 L34,48z"
+            android:fillColor="#80FFFFFF"/>
+
+        <!-- Speaker grooves -->
+        <path
+            android:pathData="M36,52 L40,52"
+            android:strokeColor="#60000000"
+            android:strokeWidth="1"
+            android:strokeLineCap="round"/>
+        <path
+            android:pathData="M36,56 L40,56"
+            android:strokeColor="#60000000"
+            android:strokeWidth="1"
+            android:strokeLineCap="round"/>
+        <path
+            android:pathData="M36,60 L40,60"
+            android:strokeColor="#60000000"
+            android:strokeWidth="1"
+            android:strokeLineCap="round"/>
+    </group>
+
+    <!-- Sound Waves - Multi-colored -->
+    <group>
+        <!-- Inner wave - highlight glow -->
+        <path
+            android:pathData="M66,38a14,14 0 0,1 0,32"
+            android:strokeColor="@color/highlight_glow"
+            android:strokeWidth="4"
+            android:strokeLineCap="round"
+            android:fillColor="@android:color/transparent"/>
+
+        <!-- Middle wave - electric blue -->
+        <path
+            android:pathData="M72,34a20,20 0 0,1 0,40"
+            android:strokeColor="@color/electric_blue"
+            android:strokeWidth="3"
+            android:strokeLineCap="round"
+            android:fillColor="@android:color/transparent"/>
+
+        <!-- Outer wave - aqua glow -->
+        <path
+            android:pathData="M78,30a26,26 0 0,1 0,48"
+            android:strokeColor="@color/aqua_glow"
+            android:strokeWidth="2"
+            android:strokeLineCap="round"
+            android:fillColor="@android:color/transparent"/>
+    </group>
+
+    <!-- Mute Slash with Double Effect -->
+    <group>
+        <!-- Glow background -->
+        <path
+            android:pathData="M26,84 L86,24"
+            android:strokeColor="#4000FFD5"
+            android:strokeWidth="10"
+            android:strokeLineCap="round"/>
+
+        <!-- Main slash -->
+        <path
+            android:pathData="M26,84 L86,24"
+            android:strokeColor="@color/highlight_glow"
+            android:strokeWidth="6"
+            android:strokeLineCap="round"/>
+
+        <!-- Accent line -->
+        <path
+            android:pathData="M28,82 L84,26"
+            android:strokeColor="@color/electric_blue"
+            android:strokeWidth="2"
+            android:strokeLineCap="round"/>
+    </group>
+
+    <!-- Digital Particles -->
+    <group>
+        <path
+            android:pathData="M20,20 L22,22"
+            android:strokeColor="@color/highlight_glow"
+            android:strokeWidth="1.5"
+            android:strokeLineCap="round"/>
+        <path
+            android:pathData="M90,18 L92,20"
+            android:strokeColor="@color/electric_blue"
+            android:strokeWidth="1.5"
+            android:strokeLineCap="round"/>
+        <path
+            android:pathData="M16,90 L18,92"
+            android:strokeColor="@color/aqua_glow"
+            android:strokeWidth="1.5"
+            android:strokeLineCap="round"/>
+        <path
+            android:pathData="M88,88 L90,90"
+            android:strokeColor="@color/highlight_glow"
+            android:strokeWidth="1.5"
+            android:strokeLineCap="round"/>
+    </group>
+
+    <!-- Corner Accents -->
+    <group>
+        <path
+            android:pathData="M14,14 L18,14 L14,18z"
+            android:fillColor="@color/electric_blue"/>
+        <path
+            android:pathData="M94,14 L90,14 L94,18z"
+            android:fillColor="@color/aqua_glow"/>
+        <path
+            android:pathData="M14,94 L18,94 L14,90z"
+            android:fillColor="@color/aqua_glow"/>
+        <path
+            android:pathData="M94,94 L90,94 L94,90z"
+            android:fillColor="@color/electric_blue"/>
+    </group>
+
+    <!-- App Badge -->
+
+
+</vector>

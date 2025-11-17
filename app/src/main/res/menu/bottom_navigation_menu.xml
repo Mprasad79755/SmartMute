@@ -1,0 +1,29 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/nav_home"
+        android:icon="@drawable/ic_home"
+        android:title="Home" />
+
+    <item
+        android:id="@+id/nav_locations"
+        android:icon="@drawable/ic_location"
+        android:title="Locations" />
+
+    <item
+        android:id="@+id/nav_schedules"
+        android:icon="@drawable/ic_schedule"
+        android:title="Schedules" />
+
+    <item
+        android:id="@+id/nav_profiles"
+        android:icon="@drawable/ic_profile"
+        android:title="Profiles" />
+
+    <item
+        android:id="@+id/nav_analytics"
+        android:icon="@drawable/ic_analytics"
+        android:title="EmergencyContacts" />
+
+</menu>

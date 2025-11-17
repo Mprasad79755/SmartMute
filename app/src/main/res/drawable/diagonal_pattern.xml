@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="20dp"
+    android:height="20dp"
+    android:viewportWidth="20"
+    android:viewportHeight="20">
+
+    <!-- Diagonal Line Pattern -->
+    <path
+        android:pathData="M0,20 L20,0"
+        android:strokeColor="#30FFFFFF"
+        android:strokeWidth="0.5"/>
+
+    <path
+        android:pathData="M0,15 L15,0"
+        android:strokeColor="#20FFFFFF"
+        android:strokeWidth="0.3"/>
+
+    <path
+        android:pathData="M5,20 L20,5"
+        android:strokeColor="#20FFFFFF"
+        android:strokeWidth="0.3"/>
+
+</vector>

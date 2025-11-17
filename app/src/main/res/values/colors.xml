@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="dark_metallic">#0B0F12</color>
+    <color name="electric_blue">#00B4FF</color>
+    <color name="aqua_glow">#00FFC3</color>
+    <color name="metallic_silver">#A6B0B8</color>
+    <color name="highlight_glow">#6EFFFF</color>
+    <color name="fog_overlay">#0AFFFFFF</color>
+    <color name="card_background">#1A1E22</color>
+    <color name="bottom_nav_background">#15181C</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <!-- FAB colors -->
+    <color name="fab_background">@color/electric_blue</color>
+    <color name="fab_icon">@color/dark_metallic</color>
+
+    <!-- Add these to your existing colors -->
+    <color name="neon_cyan">#00FFD5</color>
+    <color name="deep_space">#0A0E14</color>
+    <color name="space_blue">#1A1F2A</color>
+    <color name="glow_pink">#FF00FF</color>
+    <color name="matrix_green">#00FF00</color>
+</resources>

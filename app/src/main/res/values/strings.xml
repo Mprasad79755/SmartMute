@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">SmartMute</string>
+    <string name="accessibility_service_description">SmartMute needs accessibility access to detect emergency calls and override silent mode when needed.</string>
+</resources>

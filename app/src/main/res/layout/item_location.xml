@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardBackgroundColor="@color/card_background"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="4dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Location Name -->
+        <TextView
+            android:id="@+id/tv_location_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Location Name"
+            android:textColor="@color/electric_blue"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="4dp" />
+
+        <!-- Coordinates -->
+        <TextView
+            android:id="@+id/tv_location_coordinates"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Lat: 0.000000, Lng: 0.000000"
+            android:textColor="@color/aqua_glow"
+            android:textSize="12sp"
+            android:layout_marginBottom="2dp" />
+
+        <!-- Radius -->
+        <TextView
+            android:id="@+id/tv_location_radius"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Radius: 100m"
+            android:textColor="@color/metallic_silver"
+            android:textSize="12sp"
+            android:layout_marginBottom="2dp" />
+
+        <!-- Profiles -->
+        <TextView
+            android:id="@+id/tv_location_profiles"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Enter: Normal | Exit: Vibrate"
+            android:textColor="@color/metallic_silver"
+            android:textSize="12sp"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Buttons -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="4">
+
+            <Button
+                android:id="@+id/btn_toggle_location"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Enable"
+                android:textSize="12sp"
+                android:layout_marginEnd="4dp"
+                android:backgroundTint="@color/electric_blue" />
+
+            <Button
+                android:id="@+id/btn_edit_location"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Edit"
+                android:textSize="12sp"
+                android:layout_marginEnd="4dp"
+                android:layout_marginStart="4dp"
+                android:backgroundTint="@color/aqua_glow" />
+
+            <Button
+                android:id="@+id/btn_delete_location"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Delete"
+                android:textSize="12sp"
+                android:layout_marginStart="4dp"
+                android:backgroundTint="@android:color/holo_red_dark" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

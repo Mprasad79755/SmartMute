@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark_metallic"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Header -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Time-Based Schedules"
+            android:textColor="@color/electric_blue"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Add Schedule Card -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardBackgroundColor="@color/card_background"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Add New Schedule"
+                    android:textColor="@color/metallic_silver"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="16dp" />
+
+                <!-- Schedule Name -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    app:boxBackgroundColor="@color/dark_metallic"
+                    app:hintTextColor="@color/metallic_silver"
+                    app:boxStrokeColor="@color/electric_blue">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_schedule_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Schedule Name"
+                        android:textColor="@color/metallic_silver"
+                        android:textColorHint="@color/metallic_silver" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Time Selection -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2"
+                    android:layout_marginBottom="16dp">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:paddingEnd="8dp">
+
+                        <Button
+                            android:id="@+id/btn_start_time"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Start Time"
+                            android:textColor="@color/dark_metallic"
+                            android:backgroundTint="@color/aqua_glow" />
+
+                        <TextView
+                            android:id="@+id/tv_start_time"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Not set"
+                            android:textColor="@color/metallic_silver"
+                            android:textSize="12sp"
+                            android:gravity="center"
+                            android:layout_marginTop="4dp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:paddingStart="8dp">
+
+                        <Button
+                            android:id="@+id/btn_end_time"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="End Time"
+                            android:textColor="@color/dark_metallic"
+                            android:backgroundTint="@color/aqua_glow" />
+
+                        <TextView
+                            android:id="@+id/tv_end_time"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Not set"
+                            android:textColor="@color/metallic_silver"
+                            android:textSize="12sp"
+                            android:gravity="center"
+                            android:layout_marginTop="4dp" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- Profile Selection -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Select Profile:"
+                    android:textColor="@color/metallic_silver"
+                    android:textSize="14sp"
+                    android:layout_marginBottom="8dp" />
+
+                <Spinner
+                    android:id="@+id/spinner_profile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/electric_blue"
+                    android:layout_marginBottom="16dp" />
+
+                <!-- Days Selection -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Repeat Days:"
+                    android:textColor="@color/metallic_silver"
+                    android:textSize="14sp"
+                    android:layout_marginBottom="8dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="4">
+
+                    <CheckBox
+                        android:id="@+id/cb_monday"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Mon"
+                        android:textColor="@color/metallic_silver" />
+
+                    <CheckBox
+                        android:id="@+id/cb_tuesday"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Tue"
+                        android:textColor="@color/metallic_silver" />
+
+                    <CheckBox
+                        android:id="@+id/cb_wednesday"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Wed"
+                        android:textColor="@color/metallic_silver" />
+
+                    <CheckBox
+                        android:id="@+id/cb_thursday"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Thu"
+                        android:textColor="@color/metallic_silver" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="3"
+                    android:layout_marginBottom="16dp">
+
+                    <CheckBox
+                        android:id="@+id/cb_friday"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Fri"
+                        android:textColor="@color/metallic_silver" />
+
+                    <CheckBox
+                        android:id="@+id/cb_saturday"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Sat"
+                        android:textColor="@color/metallic_silver" />
+
+                    <CheckBox
+                        android:id="@+id/cb_sunday"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Sun"
+                        android:textColor="@color/metallic_silver" />
+
+                </LinearLayout>
+
+                <!-- Add Button -->
+                <Button
+                    android:id="@+id/btn_add_schedule"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Add Schedule"
+                    android:textColor="@color/dark_metallic"
+                    android:backgroundTint="@color/electric_blue" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- Saved Schedules -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="@color/card_background"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Saved Schedules"
+                    android:textColor="@color/metallic_silver"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="16dp" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/schedules_recycler_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="400dp"
+                    android:background="@color/dark_metallic" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,37 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.SmartMute" parent="Theme.Material3.Dark.NoActionBar">
+        <item name="colorPrimary">@color/electric_blue</item>
+        <item name="colorPrimaryVariant">@color/aqua_glow</item>
+        <item name="colorOnPrimary">@color/dark_metallic</item>
+        <item name="colorSecondary">@color/aqua_glow</item>
+        <item name="colorSecondaryVariant">@color/highlight_glow</item>
+        <item name="colorOnSecondary">@color/dark_metallic</item>
+        <item name="android:windowBackground">@color/dark_metallic</item>
+        <item name="android:statusBarColor">@color/dark_metallic</item>
+        <item name="android:navigationBarColor">@color/dark_metallic</item>
+
+        <!-- Bottom Navigation Theme -->
+        <item name="bottomNavigationStyle">@style/Widget.SmartMute.BottomNavigationView</item>
+    </style>
+
+    <style name="Theme.SmartMute" parent="Base.Theme.SmartMute" />
+
+    <!-- Custom Bottom Navigation Style -->
+    <style name="Widget.SmartMute.BottomNavigationView" parent="Widget.Material3.BottomNavigationView">
+        <item name="itemBackground">@color/bottom_nav_background</item>
+        <item name="itemIconSize">24dp</item>
+        <item name="itemTextAppearanceActive">@style/BottomNavigationView.Active.Text</item>
+        <item name="itemTextAppearanceInactive">@style/BottomNavigationView.Inactive.Text</item>
+    </style>
+
+    <style name="BottomNavigationView.Active.Text" parent="TextAppearance.AppCompat.Caption">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/electric_blue</item>
+    </style>
+
+    <style name="BottomNavigationView.Inactive.Text" parent="TextAppearance.AppCompat.Caption">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/metallic_silver</item>
+    </style>
+</resources>

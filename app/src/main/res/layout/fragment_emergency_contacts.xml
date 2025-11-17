@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark_metallic"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Header -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Emergency Contacts"
+            android:textColor="@color/electric_blue"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Add Contact Card -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardBackgroundColor="@color/card_background"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Add Emergency Contact"
+                    android:textColor="@color/metallic_silver"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="16dp" />
+
+                <!-- Permission Status -->
+                <TextView
+                    android:id="@+id/tv_permission_status"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Checking permissions..."
+                    android:textColor="@color/metallic_silver"
+                    android:textSize="12sp"
+                    android:layout_marginBottom="12dp"
+                    android:gravity="center" />
+
+                <!-- Contact Name -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    app:boxBackgroundColor="@color/dark_metallic"
+                    app:hintTextColor="@color/metallic_silver"
+                    app:boxStrokeColor="@color/electric_blue">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_contact_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Contact Name"
+                        android:textColor="@color/metallic_silver"
+                        android:textColorHint="@color/metallic_silver" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Phone Number -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="4">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:layout_marginEnd="8dp"
+                        app:boxBackgroundColor="@color/dark_metallic"
+                        app:hintTextColor="@color/metallic_silver"
+                        app:boxStrokeColor="@color/electric_blue">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/et_phone_number"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Phone Number"
+                            android:inputType="phone"
+                            android:textColor="@color/metallic_silver"
+                            android:textColorHint="@color/metallic_silver" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <Button
+                        android:id="@+id/btn_pick_contact"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Pick"
+                        android:textColor="@color/dark_metallic"
+                        android:backgroundTint="@color/aqua_glow" />
+
+                </LinearLayout>
+
+                <!-- Emergency Settings -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2"
+                    android:layout_marginBottom="12dp">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginEnd="8dp"
+                        app:boxBackgroundColor="@color/dark_metallic"
+                        app:hintTextColor="@color/metallic_silver"
+                        app:boxStrokeColor="@color/electric_blue">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/et_call_threshold"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Call Threshold"
+                            android:inputType="number"
+                            android:text="3"
+                            android:textColor="@color/metallic_silver"
+                            android:textColorHint="@color/metallic_silver" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:boxBackgroundColor="@color/dark_metallic"
+                        app:hintTextColor="@color/metallic_silver"
+                        app:boxStrokeColor="@color/electric_blue">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/et_time_window"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Time Window (min)"
+                            android:inputType="number"
+                            android:text="10"
+                            android:textColor="@color/metallic_silver"
+                            android:textColorHint="@color/metallic_silver" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </LinearLayout>
+
+                <!-- Description -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Emergency override: If this contact calls N times within X minutes, phone will ring loudly"
+                    android:textColor="@color/metallic_silver"
+                    android:textSize="12sp"
+                    android:layout_marginBottom="16dp" />
+
+                <!-- Add Button -->
+                <Button
+                    android:id="@+id/btn_add_emergency_contact"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Add Emergency Contact"
+                    android:textColor="@color/dark_metallic"
+                    android:backgroundTint="@color/electric_blue" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- Saved Contacts -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="@color/card_background"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Emergency Contacts"
+                    android:textColor="@color/metallic_silver"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="16dp" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/emergency_contacts_recycler_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="400dp"
+                    android:background="@color/dark_metallic" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+</ScrollView>
