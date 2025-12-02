@@ -42,11 +42,11 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
                     android:text="Add New Location Rule"
                     android:textColor="@color/metallic_silver"
                     android:textSize="18sp"
-                    android:textStyle="bold"
-                    android:layout_marginBottom="16dp" />
+                    android:textStyle="bold" />
 
                 <!-- Location Name -->
                 <com.google.android.material.textfield.TextInputLayout
@@ -54,8 +54,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="12dp"
                     app:boxBackgroundColor="@color/dark_metallic"
-                    app:hintTextColor="@color/metallic_silver"
-                    app:boxStrokeColor="@color/electric_blue">
+                    app:boxStrokeColor="@color/electric_blue"
+                    app:hintTextColor="@color/metallic_silver">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/et_location_name"
@@ -72,46 +72,46 @@
                     android:id="@+id/btn_get_current_location"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Get Current Location"
-                    android:textColor="@color/dark_metallic"
+                    android:layout_marginBottom="8dp"
                     android:backgroundTint="@color/aqua_glow"
-                    android:layout_marginBottom="8dp" />
+                    android:text="Get Current Location"
+                    android:textColor="@color/dark_metallic" />
 
                 <Button
                     android:id="@+id/btn_use_manual"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Enter Coordinates Manually"
-                    android:textColor="@color/dark_metallic"
+                    android:layout_marginBottom="8dp"
                     android:backgroundTint="@color/metallic_silver"
-                    android:layout_marginBottom="8dp" />
+                    android:text="Enter Coordinates Manually"
+                    android:textColor="@color/dark_metallic" />
 
                 <TextView
                     android:id="@+id/tv_coordinates"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:gravity="center"
                     android:text="No coordinates selected"
                     android:textColor="@color/metallic_silver"
-                    android:textSize="12sp"
-                    android:layout_marginBottom="8dp"
-                    android:gravity="center" />
+                    android:textSize="12sp" />
 
                 <!-- Manual Coordinates -->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
                     android:orientation="horizontal"
-                    android:weightSum="2"
-                    android:layout_marginBottom="12dp">
+                    android:weightSum="2">
 
                     <com.google.android.material.textfield.TextInputLayout
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
                         android:layout_marginEnd="4dp"
+                        android:layout_weight="1"
                         app:boxBackgroundColor="@color/dark_metallic"
-                        app:hintTextColor="@color/metallic_silver"
-                        app:boxStrokeColor="@color/electric_blue">
+                        app:boxStrokeColor="@color/electric_blue"
+                        app:hintTextColor="@color/metallic_silver">
 
                         <com.google.android.material.textfield.TextInputEditText
                             android:id="@+id/et_latitude"
@@ -127,11 +127,11 @@
                     <com.google.android.material.textfield.TextInputLayout
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
                         android:layout_marginStart="4dp"
+                        android:layout_weight="1"
                         app:boxBackgroundColor="@color/dark_metallic"
-                        app:hintTextColor="@color/metallic_silver"
-                        app:boxStrokeColor="@color/electric_blue">
+                        app:boxStrokeColor="@color/electric_blue"
+                        app:hintTextColor="@color/metallic_silver">
 
                         <com.google.android.material.textfield.TextInputEditText
                             android:id="@+id/et_longitude"
@@ -152,8 +152,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="12dp"
                     app:boxBackgroundColor="@color/dark_metallic"
-                    app:hintTextColor="@color/metallic_silver"
-                    app:boxStrokeColor="@color/electric_blue">
+                    app:boxStrokeColor="@color/electric_blue"
+                    app:hintTextColor="@color/metallic_silver">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/et_radius"
@@ -171,41 +171,41 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
                     android:text="When entering this location:"
                     android:textColor="@color/metallic_silver"
-                    android:textSize="14sp"
-                    android:layout_marginBottom="4dp" />
+                    android:textSize="14sp" />
 
                 <Spinner
                     android:id="@+id/spinner_enter_profile"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:backgroundTint="@color/electric_blue"
-                    android:layout_marginBottom="12dp" />
+                    android:layout_marginBottom="12dp"
+                    android:backgroundTint="@color/electric_blue" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
                     android:text="When leaving this location:"
                     android:textColor="@color/metallic_silver"
-                    android:textSize="14sp"
-                    android:layout_marginBottom="4dp" />
+                    android:textSize="14sp" />
 
                 <Spinner
                     android:id="@+id/spinner_exit_profile"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:backgroundTint="@color/electric_blue"
-                    android:layout_marginBottom="16dp" />
+                    android:layout_marginBottom="16dp"
+                    android:backgroundTint="@color/electric_blue" />
 
                 <!-- Add Button -->
                 <Button
                     android:id="@+id/btn_add_location"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:backgroundTint="@color/electric_blue"
                     android:text="Add Location Rule"
-                    android:textColor="@color/dark_metallic"
-                    android:backgroundTint="@color/electric_blue" />
+                    android:textColor="@color/dark_metallic" />
 
             </LinearLayout>
 
